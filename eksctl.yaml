@@ -1,0 +1,23 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+    name: cluster-8
+    region: eu-central-1
+
+nodeGroups:
+    - name: ng-1
+      minSize: 2
+      maxSize: 5
+      iam:
+        withAddonPolicies:
+          ebs: true
+          fsx: true
+          efs: true
+      instancesDistribution:
+        maxPrice: 0.017
+        instanceTypes: ["t3.small", "t3.medium"] # At least one instance type should be specified
+        onDemandBaseCapacity: 0
+        onDemandPercentageAboveBaseCapacity: 50
+        spotInstancePools: 2

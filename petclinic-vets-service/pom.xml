@@ -17,7 +17,7 @@
     <version>1.0</version>
 
     <properties>
-        <java.version>22</java.version>
+        <java.version>17</java.version>
         <!--suppress UnresolvedMavenProperty -->
         <spring-boot.build-image.imageName>${env.PUSH_IMAGE_REGISTRY}/${project.artifactId}</spring-boot.build-image.imageName>
         <spring-boot.build-image.publish>false</spring-boot.build-image.publish>

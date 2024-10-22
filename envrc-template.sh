@@ -8,7 +8,7 @@ if [ "$local_setup" = true ] ; then
   export PULL_IMAGE_REGISTRY=my-cluster-registry:5000
 else
   export LB_IP=$(kubectl get svc -n istio-system istio-ingressgateway -ojsonpath='{.status.loadBalancer.ingress[0].ip}')
-  export PUSH_IMAGE_REGISTRY=???  # TODO: set this environment variable to the value of your image registry
+  export PUSH_IMAGE_REGISTRY=28277589254.dkr.ecr.eu-west-1.amazonaws.com
   export PULL_IMAGE_REGISTRY=${PUSH_IMAGE_REGISTRY}
 fi
 
